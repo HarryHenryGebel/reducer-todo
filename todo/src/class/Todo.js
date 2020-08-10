@@ -5,7 +5,10 @@ export default class Todo {
     // initialize
     this.item = item;
     this.completed = false;
-    this.id = lastId + 1;
+    const id = Date.now();
+
+    // verify id uniqueness and save
+    this.id = id > lastId ? id : lastId + 1;
 
     // id management
     lastId = this.id;
