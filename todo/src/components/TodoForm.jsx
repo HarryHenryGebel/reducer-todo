@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 
 export default function TodoForm (props) {
-  const {todoList, todoDispatcher} = props,
+  const {todoDispatcher} = props,
         [todoText, setTodoText] = useState("");
 
   return (

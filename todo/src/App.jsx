@@ -2,8 +2,8 @@ import React, {useReducer} from "react";
 import "fontsource-roboto";
 
 import {initialState, todoReducer} from "./reducers/todoReducer.js";
-import "TodoList" from "./components/TodoList";
-import "TodoForm" from "./components/TodoForm";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 export default function App() {
   const [todoList, todoDispatcher] = useReducer(initialState, todoReducer);
@@ -13,8 +13,7 @@ export default function App() {
         <h1>Gebeldotoo</h1>
         <TodoList todoList={todoList}
                   todoDispatcher={todoDispatcher}/>
-        <TodoForm todoList={todoList}
-                  todoDispatcher={todoDispatcher}/>
+        <TodoForm todoDispatcher={todoDispatcher}/>
       </div>
   );
 }
