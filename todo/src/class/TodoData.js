@@ -1,6 +1,6 @@
 let lastId = 0;
 
-export default class Todo {
+export default class TodoData {
   constructor (item) {
     // initialize
     this.item = item;
