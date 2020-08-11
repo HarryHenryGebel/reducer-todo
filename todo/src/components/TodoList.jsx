@@ -8,7 +8,6 @@ import TodoItem from "./TodoItem";
 
 export default function TodoList (props) {
   const {todoList, todoDispatcher} = props;
-  console.log(todoList);
 
   return (
     <>

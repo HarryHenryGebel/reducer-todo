@@ -7,7 +7,6 @@ import TodoList from "./components/TodoList";
 
 export default function App() {
   const [todoList, todoDispatcher] = useReducer(todoReducer, initialState);
-  console.log(todoList);
 
   return (
       <div>
