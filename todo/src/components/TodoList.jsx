@@ -8,6 +8,7 @@ import TodoItem from "./TodoItem";
 
 export default function TodoList (props) {
   const {todoList, todoDispatcher} = props;
+  console.log(todoList);
 
   return (
     <>
@@ -21,7 +22,8 @@ export default function TodoList (props) {
       </List>
       <Box m={1} component="span">
         <Button variant="contained"
-                onClick={todoDispatcher({type: "CLEAR"})}
+                display="none"
+                onClick={() => todoDispatcher({type: "CLEAR"})}
                 startIcon={<HighlightOffIcon/>}>
           Clear completed items
         </Button>

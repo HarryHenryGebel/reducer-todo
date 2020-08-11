@@ -2,7 +2,7 @@ import React from "react";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
-export default function Todo(props) {
+export default function TodoItem(props) {
   const {todoData, toggleCompleted} = props,
         // change color when completed
         color = todoData.completed ?
