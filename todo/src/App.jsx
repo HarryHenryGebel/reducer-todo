@@ -4,15 +4,18 @@ import "fontsource-roboto";
 
 import {initialState, todoReducer} from "./reducers/todoReducer.js";
 import "TodoList" from "./components/TodoList";
+import "TodoForm" from "./components/TodoForm";
 
-function App() {
+export default function App() {
   const [todoList, todoDispatcher] = useReducer(initialState, todoReducer);
 
   return (
-    <Card variant="outlined">
-      <TodoList list={todoList}, dispatcher={todoDispatcher}/>
-    </Card>
+      <div>
+        <h1>Gebeldotoo</h1>
+        <TodoList todoList={todoList}
+                  todoDispatcher={todoDispatcher}/>
+        <TodoForm todoList={todoList}
+                  todoDispatcher={todoDispatcher}/>
+      </div>
   );
 }
-
-export default App;
