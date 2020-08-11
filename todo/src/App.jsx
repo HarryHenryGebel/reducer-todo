@@ -1,5 +1,4 @@
 import React, {useReducer} from "react";
-import Card from '@material-ui/core/Card';
 import "fontsource-roboto";
 
 import {initialState, todoReducer} from "./reducers/todoReducer.js";
