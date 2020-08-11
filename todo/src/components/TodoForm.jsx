@@ -23,7 +23,7 @@ export default function TodoForm (props) {
       <br/>
       <Box m={1} component="span">
         <Button variant="contained"
-                disabled={this.state.todoText === ""}
+                disabled={todoText === ""}
                 startIcon={<AddCircleIcon/>}
                 onClick={() => {
                   todoDispatcher({type: "CREATE", payload: todoText});
