@@ -15,7 +15,7 @@ export default function TodoForm (props) {
       <Box m={1}>
         <TextField fullWidth={true}
                    id="todo-item-field"
-                   onChange={(event) => setTodoText(event.target.value)}
+                   onChange={event => setTodoText(event.target.value)}
                    value={todoText}
                    variant="filled"
                    label="Todo Item"/>
