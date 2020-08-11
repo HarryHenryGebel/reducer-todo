@@ -17,7 +17,7 @@ export function todoReducer (state, action) {
     break;
   case "TOGGLE":
     returnValue = state.map((item) => item.id !== action.payload ?
-                     item :
+                            item :
                             {...item, completed: !item.completed});
     break;
   default:
