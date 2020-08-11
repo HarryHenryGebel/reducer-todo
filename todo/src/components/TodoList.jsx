@@ -9,6 +9,15 @@ import TodoItem from "./TodoItem";
 export default function TodoList (props) {
   const {todoList, todoDispatcher} = props;
 
+  function hasCompletedItems () {
+    // return true as soon as one completed item is found
+    for (let item of todoList)
+      if (item.completed)
+        return true;
+
+    return false;
+  }
+
   return (
     <>
       <List>
@@ -21,7 +30,7 @@ export default function TodoList (props) {
       </List>
       <Box m={1} component="span">
         <Button variant="contained"
-                display="none"
+                disabled={!hasCompletedItems()}
                 onClick={() => todoDispatcher({type: "CLEAR"})}
                 startIcon={<HighlightOffIcon/>}>
           Clear completed items
