@@ -26,7 +26,7 @@ export default function TodoForm (props) {
                 disabled={this.state.todoText === ""}
                 startIcon={<AddCircleIcon/>}
                 onClick={() => {
-                  todoDispatcher({type: "ADD", payload: todoText});
+                  todoDispatcher({type: "CREATE", payload: todoText});
                   setTodoText("");
                 }}>
           Add Todo Item
