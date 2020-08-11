@@ -24,8 +24,7 @@ export default function TodoList (props) {
         {todoList.map(item => (
           <TodoItem key={item.id}
                     item={item}
-                    toggleCompleted={() => todoDispatcher(
-                      {type: "TOGGLE", payload: item.id})}/>
+                    todoDispatcher={todoDispatcher}/>
         ))}
       </List>
       <Box m={1} component="span">
